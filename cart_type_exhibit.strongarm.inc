@@ -62,6 +62,30 @@ function cart_type_exhibit_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_complete_cart_exhibition';
+  $strongarm->value = '1';
+  $export['content_complete_cart_exhibition'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'content_complete_fields_cart_exhibition';
+  $strongarm->value = array(
+    0 => 'title',
+    1 => 'body',
+    2 => 'field_cart_artist',
+    3 => 'field_cart_curator',
+    4 => 'field_cart_date',
+    5 => 'field_cart_exhibit_type',
+    6 => 'field_cart_image',
+    7 => 'field_cart_media_types',
+    8 => 'field_cart_venue',
+  );
+  $export['content_complete_fields_cart_exhibition'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__cart_exhibition';
   $strongarm->value = array(
     'view_modes' => array(
@@ -146,6 +170,46 @@ function cart_type_exhibit_strongarm() {
   $strongarm->name = 'node_submitted_cart_exhibition';
   $strongarm->value = 0;
   $export['node_submitted_cart_exhibition'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:cart_exhibition_allowed_layouts';
+  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:30:"panelizer_node:cart_exhibition";s:23:"allowed_layout_settings";a:9:{s:8:"flexible";b:1;s:25:"threecol_33_34_33_stacked";b:1;s:14:"twocol_stacked";b:1;s:6:"onecol";b:1;s:25:"threecol_25_50_25_stacked";b:1;s:17:"threecol_33_34_33";b:1;s:17:"threecol_25_50_25";b:1;s:13:"twocol_bricks";b:1;s:6:"twocol";b:1;}s:10:"form_state";N;}';
+  $export['panelizer_node:cart_exhibition_allowed_layouts'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:cart_exhibition_allowed_layouts_default';
+  $strongarm->value = 1;
+  $export['panelizer_node:cart_exhibition_allowed_layouts_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:cart_exhibition_allowed_types_default';
+  $strongarm->value = 1;
+  $export['panelizer_node:cart_exhibition_allowed_types_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:cart_exhibition_default';
+  $strongarm->value = array(
+    'entity_form_field' => 'entity_form_field',
+    'entity_field_extra' => 'entity_field_extra',
+    'entity_field' => 'entity_field',
+    'token' => 'token',
+    'block' => 'block',
+    'custom' => 'custom',
+    'entity_view' => 'entity_view',
+    'flag_link' => 'flag_link',
+    'views' => 'views',
+    'views_panes' => 'views_panes',
+    'other' => 'other',
+  );
+  $export['panelizer_node:cart_exhibition_default'] = $strongarm;
 
   return $export;
 }

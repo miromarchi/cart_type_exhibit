@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Type Exhibition feature.
+ */
+
+include_once 'cart_type_exhibit.features.inc';

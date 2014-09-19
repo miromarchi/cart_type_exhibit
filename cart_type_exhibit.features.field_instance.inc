@@ -102,7 +102,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 1,
+          'active' => 0,
           'author' => '',
           'author_current_user' => 1,
         ),
@@ -116,6 +116,52 @@ function cart_type_exhibit_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-cart_exhibition-field_cart_artist_other'
+  $field_instances['node-cart_exhibition-field_cart_artist_other'] = array(
+    'bundle' => 'cart_exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Insert here Artists who will not be displayed as Cuban (the system will not create a full record for them).',
+    'display' => array(
+      'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cart_artist_other',
+    'label' => 'Artist/s (NOT Cuban)',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 85,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 14,
     ),
   );
 
@@ -219,7 +265,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 1,
+          'active' => 0,
           'author' => '',
           'author_current_user' => 1,
         ),
@@ -256,7 +302,7 @@ function cart_type_exhibit_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -280,7 +326,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 1,
+          'active' => 0,
           'author' => '',
           'author_current_user' => 1,
         ),
@@ -293,7 +339,7 @@ function cart_type_exhibit_field_default_field_instances() {
         'size' => 85,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -623,7 +669,7 @@ function cart_type_exhibit_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'exhibitions',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -635,25 +681,48 @@ function cart_type_exhibit_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'reference' => 0,
+            'remote' => 'remote',
+            'remotefile' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
         'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_crop' => 1,
         'manualcrop_instant_preview' => 1,
         'manualcrop_require_cropping' => array(
           'cart_img_circle' => 0,
+          'cart_img_coffeebook' => 0,
           'cart_img_cover' => 0,
           'cart_img_square' => 0,
         ),
         'manualcrop_styles_list' => array(
           'cart_img_circle' => 0,
+          'cart_img_coffeebook' => 0,
           'cart_img_cover' => 'cart_img_cover',
           'cart_img_square' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'cart_img_cover',
         'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
@@ -891,7 +960,7 @@ function cart_type_exhibit_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -902,7 +971,7 @@ function cart_type_exhibit_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cart_organizator',
-    'label' => 'Organizator/s',
+    'label' => 'Organizer/s',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -925,7 +994,7 @@ function cart_type_exhibit_field_default_field_instances() {
         'size' => 85,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -1008,7 +1077,7 @@ function cart_type_exhibit_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1042,7 +1111,7 @@ function cart_type_exhibit_field_default_field_instances() {
         'size' => 85,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -1151,7 +1220,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 1,
+          'active' => 0,
           'author' => '',
           'author_current_user' => 1,
         ),
@@ -1231,6 +1300,7 @@ function cart_type_exhibit_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Art Media types');
   t('Artist/s');
+  t('Artist/s (NOT Cuban)');
   t('Blog link');
   t('Catalog');
   t('Curator/s');
@@ -1241,9 +1311,10 @@ function cart_type_exhibit_field_default_field_instances() {
   t('Flickr link');
   t('Google+ link');
   t('Image');
+  t('Insert here Artists who will not be displayed as Cuban (the system will not create a full record for them).');
   t('Instagram link');
   t('Main exhibit');
-  t('Organizator/s');
+  t('Organizer/s');
   t('RSS link');
   t('Sponsor/s');
   t('Twitter link');

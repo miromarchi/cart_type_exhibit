@@ -232,6 +232,7 @@ function cart_type_exhibit_field_group_info() {
       1 => 'field_cart_curator',
       2 => 'field_cart_sponsor',
       3 => 'field_cart_organizator',
+      4 => 'field_cart_artist_other',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -262,6 +263,7 @@ function cart_type_exhibit_field_group_info() {
       1 => 'field_cart_curator',
       2 => 'field_cart_sponsor',
       3 => 'field_cart_organizator',
+      4 => 'field_cart_artist_other',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

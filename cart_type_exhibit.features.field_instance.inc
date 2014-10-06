@@ -570,7 +570,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -785,7 +785,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -1292,7 +1292,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 24,
+      'weight' => 22,
     ),
   );
 

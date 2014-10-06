@@ -159,7 +159,8 @@ function cart_type_exhibit_strongarm() {
   $strongarm->name = 'node_options_cart_exhibition';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'revision',
+    1 => 'promote',
+    2 => 'revision',
   );
   $export['node_options_cart_exhibition'] = $strongarm;
 
@@ -247,6 +248,20 @@ function cart_type_exhibit_strongarm() {
     'other' => 'other',
   );
   $export['panelizer_node:cart_exhibition_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_cart_exhibition_pattern';
+  $strongarm->value = 'exhibitions/[node:title]';
+  $export['pathauto_node_cart_exhibition_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_nodes_cart_exhibition';
+  $strongarm->value = array();
+  $export['simplify_nodes_cart_exhibition'] = $strongarm;
 
   return $export;
 }

@@ -1213,6 +1213,11 @@ function cart_type_exhibit_field_default_field_instances() {
     'label' => 'Venue',
     'required' => 1,
     'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1220,9 +1225,10 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 0,
+          'active' => 1,
           'author' => '',
           'author_current_user' => 1,
+          'status' => -1,
         ),
         'match_operator' => 'CONTAINS',
         'path' => '',

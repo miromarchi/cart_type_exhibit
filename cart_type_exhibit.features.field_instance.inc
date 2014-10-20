@@ -1225,7 +1225,7 @@ function cart_type_exhibit_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'entityreference_autocreate' => array(
-          'active' => 1,
+          'active' => 0,
           'author' => '',
           'author_current_user' => 1,
           'status' => -1,

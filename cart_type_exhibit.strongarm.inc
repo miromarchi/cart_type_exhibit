@@ -122,6 +122,9 @@ function cart_type_exhibit_strongarm() {
       'cart_vmode_sponsor' => array(
         'custom_settings' => FALSE,
       ),
+      'cart_vmode_publisher' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

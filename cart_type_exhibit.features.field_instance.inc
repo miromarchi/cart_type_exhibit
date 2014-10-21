@@ -372,7 +372,7 @@ function cart_type_exhibit_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'short',
+          'format_type' => 'cart_date_day',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
